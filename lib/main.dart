@@ -10,6 +10,7 @@ void main() async {
   //print(json.decode(response.body)["results"]["currencies"]["BRL"]);
 
   runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
     home: Home(),
     theme: ThemeData(
       hintColor: Colors.amber,
@@ -63,6 +64,7 @@ class _HomeState extends State<Home> {
       return;
     }
     //print(text);
+    double euro = double.parse(text);
     realController.text = (euro * this.euro).toStringAsFixed(2);
     dolarController.text = (euro * this.euro / dolar).toStringAsFixed(2);
   }
